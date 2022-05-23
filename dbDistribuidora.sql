@@ -63,7 +63,7 @@ idfornecedor int primary key auto_increment
 create table tbNotaFiscal(
 registroNfiscal date,
 idVenda int primary key auto_increment,
-/* Razão Social
+/*Razão Social
 CNPJ
 DDD
 Telefone
@@ -74,6 +74,6 @@ Estado
 Cidade
 CEP
 E-Mail
-Inscrição Estadual */
+Inscrição Estadual*/
 foreign key (idVenda) references tbVenda(idvenda)
 )
