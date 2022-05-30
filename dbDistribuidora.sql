@@ -1,4 +1,4 @@
-
+drop database dbdistribuidora;
 create database dbdistribuidora; 
  use dbdistribuidora; 
   
@@ -10,14 +10,14 @@ create database dbdistribuidora;
  create table tbcidade( 
 	 idcidade int primary key auto_increment, 
      cidade varchar(50), 
-     UFID int auto_increment, 
+     UFID int, 
      foreign key (UFId) references tbestado(UFId) 
  ); 
-  
+
  create table tblog( 
      logradouro varchar(100) not null, 
      bairro varchar(50), 
-     cep int primary key, 
+     cep numeric(8) primary key, 
      idcidade int, 
      foreign key (idcidade) references tbcidade(idcidade) 
  ); 
